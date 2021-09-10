@@ -15,5 +15,4 @@ var runningSum = function(input) {
    return sumList;
 };
 
-let testone = runningSum([5, 6, 0]);
-console.log(testone);
+

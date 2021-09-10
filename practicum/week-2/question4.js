@@ -23,6 +23,3 @@ var howManyCommon = function(A, B) {
     return letterCount;
 };
     
-
-    let testfour = howManyCommon('gtY', 'iTygrtg');
-    console.log(testfour);

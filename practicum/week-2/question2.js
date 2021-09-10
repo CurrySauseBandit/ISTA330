@@ -29,6 +29,3 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
 
     
  };
-
- let testtwo = canGetEqualCookies([2,5,8], 8)
- console.log(testtwo)

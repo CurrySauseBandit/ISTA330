@@ -18,5 +18,3 @@ var median = function(input) {
 
 };
 
-let testfour = median([1, 2, 2, 4, 7, 9]);
-console.log(testfour);

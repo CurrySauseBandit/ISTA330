@@ -10,23 +10,25 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
  */
 
  var canGetEqualCookies = function(cookies, extraCookies) {
-     var highestCookie = Number.MAX_VALUE(cookies);
-     for (number of inputs) {
-             if (number != highestCookies) {
-                     var neededCookies = highestCookies - number;
-                     if (neededCookies < extraCookies) {
-                             number += neededCookies;
-                             extraCookies -= neededCookies;
-                     }
-                     else {
-                             return false;
-                        };
-
-
-
-             }
+     var highestCookie = 0;
+     var neededCookies = 0;
+     for (number of cookies) {
+        if (highestCookie < number) {
+                highestCookie = number;
+        }
+     }
+     for (number of cookies) {
+        if (number < highestCookie) {
+                extraCookies -= highestCookie - number;
+                if (extraCookies < 0) {
+                        return false;
+                }
+        }
      }
      return true;
 
     
  };
+
+ let testtwo = canGetEqualCookies([2,5,8], 8)
+ console.log(testtwo)

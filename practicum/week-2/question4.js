@@ -15,9 +15,11 @@ var howManyCommon = function(A, B) {
     let str2 = B.toString();
     var letterCount = 0;
     for (let i = 0; i < str1.length; i++) {
-        if (str2.includes(str1.charAt(i))) {
-            letterCount += 1;
-        }
+       for (let j = 0; j < str2.length; j++) {
+           if (str1.charAt(i) == str2.charAt(j)) {
+               letterCount += 1;
+           }
+       }
 
     }
     return letterCount;

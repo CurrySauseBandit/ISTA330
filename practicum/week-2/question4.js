@@ -11,13 +11,18 @@ The letters in A are guaranteed distinct, and all characters in A and B are lett
 */
 
 var howManyCommon = function(A, B) {
+    let str1 = A.toLowerCase()
+    let str2 = B.toLowerCase()
     var letterCount = 0;
-    for (letter of A) {
-        if (B.contains(letter)) {
+    for (let i = 0; i < str1.length; i++) {
+        if (str2.includes(str1.charAt(i))) {
             letterCount += 1;
         }
 
     }
-}
-    answer.push(letterCount)
     return letterCount;
+};
+    
+
+    let testfour = howManyCommon('gtY', 'iTygrtg');
+    console.log(testfour);

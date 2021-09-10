@@ -48,7 +48,4 @@ var minimalReduction = function(n) {
         }
     }
 
-let testone = minimalReduction(13)
-console.log(testone);
-
 

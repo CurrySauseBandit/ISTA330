@@ -25,5 +25,4 @@ var howManyCommon = function(A, B) {
 };
     
 
-    let testfour = howManyCommon('asDf', 'dsssaaFa');
-    console.log(testfour);
+    

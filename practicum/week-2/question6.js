@@ -7,13 +7,16 @@ output: 3
 
 var median = function(input) {
     var number = 0;
-    if (input.length % 2 == 0) {
-        number.valueOf = Math.floor((input.length.valueOf() + 1)/2-1)
-        console.log(number.valueOf())
-        return input[number.valueOf()];
+    if (input.length % 2 == 1) {
+        position = (input.length + 1) / 2 - 1
+        return input[position];
     }
     else {
-        return input[input.length/2] + input[input.length/2 - 1];
+        position = input[input.length/2 - 1] + input[((input.length/2) + 1) - 1] / 2
+        return position
     }
 
 };
+
+let testfour = median([1, 2, 2, 4, 7, 9]);
+console.log(testfour);

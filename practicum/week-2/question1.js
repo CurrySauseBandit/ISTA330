@@ -10,5 +10,5 @@ var runningSum = function(input) {
    for (number of input) {
        running += number
    }
-   return runningSum
+   console.log(runningSum)
 };

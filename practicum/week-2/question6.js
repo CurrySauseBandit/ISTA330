@@ -13,7 +13,7 @@ var median = function(input) {
         return input[position];
     }
     else {
-        position = input[input.length/2 - 1] + input[((input.length/2) + 1) - 1] / 2
+        position = input[input.length/2 - 1] + input[(input.length/2)] / 2
         return position
     }
 

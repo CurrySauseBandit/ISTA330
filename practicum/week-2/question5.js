@@ -12,7 +12,43 @@ output: 3
 */
 
 var minimalReduction = function(n) {
+    opCount = 0;
+
+    while (n != 0) {
+        if (n == 1) {
+            n = n - 1;
+            opCount += 1;
+        }
+        else if (isPrime(n) == true) {
+            n = n - 1;
+            opCount += 1;
+        }
+        else if (n % 2 == 0) {
+            n = Math.round(n / 4);
+            opCount += 1;
+        }
+        else if (n % 2 == 1) {
+            n = Math.round(n / 3)
+            opCount += 1;
+        }
+    }
+    if (opCount == 0) {
+        return 0;
+    }
+    else {
+        return opCount - 1;
+    }
     
+
+    function isPrime(n) {
+        for (var i = 2; i < n; i++) {
+            if (n % i === 0) return false;
+            return n > 1;
+        }
+    }
 };
+
+let testone = minimalReduction(13)
+console.log(testone);
 
 

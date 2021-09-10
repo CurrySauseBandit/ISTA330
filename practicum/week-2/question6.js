@@ -7,6 +7,7 @@ output: 3
 
 var median = function(input) {
     var number = 0;
+    input.sort();
     if (input.length % 2 == 1) {
         position = (input.length + 1) / 2 - 1
         return input[position];

@@ -32,6 +32,4 @@ var minimalReduction = function(n) {
 
 };
 
-let testsix = minimalReduction(12);
-console.log(testsix);
 

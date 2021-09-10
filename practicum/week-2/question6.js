@@ -17,6 +17,3 @@ var median = function(input) {
     }
 
 };
-
-let testsix = median([1, 2, 2, 3, 4, 7, 9]);
-console.log(testsix);

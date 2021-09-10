@@ -19,6 +19,3 @@ var decode = function(input) {
     }
     return outputList;
 };
-
-let testsix = decode([2,5,4,2]);
-console.log(testsix);

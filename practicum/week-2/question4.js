@@ -11,5 +11,13 @@ The letters in A are guaranteed distinct, and all characters in A and B are lett
 */
 
 var howManyCommon = function(A, B) {
+    var letterCount = 0;
+    for (letter of A) {
+        if (B.contains(letter)) {
+            letterCount += 1;
+        }
 
-};
+    }
+}
+    answer.push(letterCount)
+    return letterCount;

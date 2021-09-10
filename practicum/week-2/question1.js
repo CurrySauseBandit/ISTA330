@@ -9,7 +9,9 @@ var runningSum = function(input) {
    var running = 0
    for (number of input) {
        running += number
-       answer.push(running)
    }
-   return answer
+   return running
 };
+
+let testQuestionOne = runningSum([5,6,1]);
+console.log(testQuestionOne);

@@ -38,6 +38,7 @@ var minimalReduction = function(n) {
     else {
         return opCount - 1;
     }
+};
     
 
     function isPrime(n) {
@@ -46,7 +47,8 @@ var minimalReduction = function(n) {
             return n > 1;
         }
     }
-};
 
+let testone = minimalReduction(13)
+console.log(testone);
 
 

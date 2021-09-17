@@ -11,8 +11,8 @@ is at least twice as much as every other number
 
 var largestNumberIsAtLeastTwice = function(input) {
         var largestnumber = Math.max(input);
-        for (const val of input) {
-                if (Math.floor(largestnumber / 2) < Math.floor(val)) {
+        for (number of input) {
+                if (Math.floor(largestnumber / 2) < Math.floor(number)) {
                         return false;
                 }
         
@@ -20,4 +20,3 @@ var largestNumberIsAtLeastTwice = function(input) {
         return true;
 };
 
-console.count("Lvoe")

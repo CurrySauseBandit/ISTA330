@@ -9,15 +9,25 @@ Given n, calculate F(n).
 */
 
 var F = function(n) {
+    var container = [];
+    const reducer = (previousValue, currentValue) => previousValue + currentValue;
     fsum = 0;
+    a = 0;
+    b = 1;
     if(n == 0) {
         return fsum;
     }
-    for (var i = 0; i < n; i++) {
-        fsum += n - i;
+    while (n > 0) {
+        fsum = a + b;
+        container.push(fsum);
+
+        a = b;
+        b = fsum;
+        n = n - 1;
     }
-    return fsum;
+    //console.log(container);
+    return container[container.length - 2];
 };
 
-//let test12 = F(30);
-//console.log(test12);
+let test12 = F(30);
+console.log(test12);

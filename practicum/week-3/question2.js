@@ -10,8 +10,8 @@ Example: input: [-12,3,-1,5,-2,1,-7]
           */
 
  var largestSubarray = function(input) {
-     let currSum = 0;
-     let savedSum = -1000;
+     var currSum = 0;
+     var savedSum = -1000;
 
      for (var currStart = 0; currStart < input.length; currStart++) {
              currSum = Math.max(input[currStart], currSum + input[currStart]);

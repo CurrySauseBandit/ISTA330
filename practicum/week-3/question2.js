@@ -14,22 +14,14 @@ Example: input: [-12,3,-1,5,-2,1,-7]
      var savedSum = 0;
      var firstsum = true;
 
-     for (var i = 0; i < input.length(); i++) {
-        for (var j = i + 1; j < input.length(); j++) {
-                currSum += input[j];
-        }
-        currSum += input[i];
-        if (firstsum == true) {
-                savedSum = currSum;
-                firstsum = false;
-        }
-        if (currSum > savedSum) {
-                savedSum = currSum;
-        }
-        currSum = 0;
-        console.log(savedSum);
-     }
+     for (var i = 0; i < input.length - 1; i++) {
+             currSum += input[i];
+                        console.log(currSum);
+                }
+        
+     console.log(savedSum);
      return savedSum;
  };
 
-
+ let test4 = largestSubarray([-12,3,-1,5,-2,1,-7]);
+ //console.log(test4);

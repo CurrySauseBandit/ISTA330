@@ -19,3 +19,5 @@ var largestNumberIsAtLeastTwice = function(input) {
         }
         return true;
 };
+
+console.count("Lvoe")

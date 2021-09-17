@@ -14,7 +14,7 @@ output: 3
 
 var d_integer = function(input) {
 
-    var currNum = 0;
+    var currNum = -1;
     var currCount = 0;
     for (var i = 0; i < input.length; i++) {
         for (var j = i; j < input.length; j++) {
@@ -26,12 +26,14 @@ var d_integer = function(input) {
             
         }
         if (currCount == input[i]) {
-            return input[i];
+            if (currNum < input[i]) {
+                currNum = input[i];
+            } 
         }
         currCount = 0;
     }
-    return -1;
+    return currNum;
 };
 
-//let test8 = d_integer([3,5,3,3,5,1]);
+//let test8 = d_integer([3,5,3,4,4,3,5,1,4,4]);
 //console.log(test8);

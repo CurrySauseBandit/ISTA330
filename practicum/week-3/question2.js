@@ -10,18 +10,17 @@ Example: input: [-12,3,-1,5,-2,1,-7]
           */
 
  var largestSubarray = function(input) {
-     var currSum = 0;
-     var savedSum = 0;
-     var firstsum = true;
+     let currSum = 0;
+     let savedSum = -1000;
 
-     for (var i = 0; i < input.length - 1; i++) {
-             currSum += input[i];
-                        console.log(currSum);
-                }
+     for (var currStart = 0; currStart < input.length; currStart++) {
+             currSum = Math.max(input[currStart], currSum + input[currStart]);
+             savedSum = Math.max(currSum, savedSum);       
+        }
+        //console.log(savedSum);
         
-     console.log(savedSum);
-     return savedSum;
+        return savedSum;        
  };
 
- let test4 = largestSubarray([-12,3,-1,5,-2,1,-7]);
+ //let test4 = largestSubarray([-12,3,-1,5,-2,1,-7]);
  //console.log(test4);

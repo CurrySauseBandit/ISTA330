@@ -25,3 +25,6 @@ var hasDuplicates = function(input) {
     }
     return false;
 };
+
+//let test4 = hasDuplicates([19,1,1,23,23,4,3,23,1,2]);
+//console.log(test4);

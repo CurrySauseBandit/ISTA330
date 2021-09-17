@@ -13,5 +13,18 @@ output: [
 */
 
 var PascalTriangle = function(n) {
-
+  var tcontainer = [];
+  for (var row = 0; row < n; row++) {
+    tcontainer[row] = [];
+    for (var col = 0; col <= row; col++) {
+      if(col == 0 || col == row ){
+        tcontainer[row].push(1);
+      }
+      else {
+        tcontainer[row][col] = tcontainer[row-1][col-1] + tcontainer[row-1][col];
+      }
+    }
+  }
+  return tcontainer;
 };
+

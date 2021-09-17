@@ -13,8 +13,10 @@ var largestNumberIsAtLeastTwice = function(input) {
         var largestnumber = Math.max.apply(Math, input);
         console.log(largestnumber);
         for (number of input) {
-                if (Math.floor(largestnumber / 2) < Math.floor(number)) {
-                        return false;
+                if (number != largestnumber) {
+                        if (Math.floor(largestnumber / 2) < Math.floor(number)) {
+                                return false;
+                        }
                 }
         
         }

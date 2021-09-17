@@ -9,5 +9,15 @@ Given n, calculate F(n).
 */
 
 var F = function(n) {
-
+    fsum = 0;
+    if(n == 0) {
+        return fsum;
+    }
+    for (var i = 0; i < n; i++) {
+        fsum += n - i;
+    }
+    return fsum;
 };
+
+//let test12 = F(30);
+//console.log(test12);

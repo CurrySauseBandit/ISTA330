@@ -17,6 +17,7 @@
     <div id='flowersDiv'>
         <table></table>
     </div>
+
     <script>
         /*
            Using the array flowers below, 
@@ -29,15 +30,18 @@
        let showFlower = (flowers) => {
            let flowersDiv = document.getElementById("flowersDiv");
            let table = flowersDiv.firstElementChild;
-           let row1 = table.insertRow(0);
-           let row2 = table.insertRow(1);
+           let row1 = table.insertRow();
+           let row2 = table.insertRow();
            for (i = 0; i < flowers.length; i++) {
-               if (i < 4) {
-                   row1.innerHTML += `<figure>
-                                        <img src = '${flowers[i].picture}'
-                                            alt = "${flowers[i].name}">
-                                            <figcaption>${flowers[i].name}</figcaption>
-                                        </figure>`;
+                   let figure = `<figure>
+                                    <img src = '${flowers[i].picture}'
+                                        alt = "${flowers[i].name}">
+                                    <figcaption>${flowers[i].name}</figcaption>
+                                 </figure></td>`;
+                if (i < 4) {
+                    row1.innerHHTML += figure;
+                } else {
+                    row2.innerHHTML += figure;
                }
            }
        };

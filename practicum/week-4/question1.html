@@ -27,7 +27,7 @@
            and under the image display its name.
         */
        let showFlower = (flowers) => {
-           let flowersDiv = document.firstElementChild;
+           let flowersDiv = document.getElementById("flowersDiv");
            let table = flowersDiv.firstElementChild;
            let row1 = table.insertRow(0);
            let row2 = table.insertRow(1);
@@ -40,7 +40,7 @@
                                         </figure>`;
                }
            }
-       }
+       };
        class Flower {
            constructor(name, pictureName) {
                this.name = name;

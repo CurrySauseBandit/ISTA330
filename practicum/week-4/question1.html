@@ -15,20 +15,7 @@
         and under the image display its name.Your webpage should be responsive.
     </div>
     <div id='flowersDiv'>
-        <div class="container">
-            <div class = "row">
-                <div class="col-sm-3">document.getElementByClass("daffodil")</div>
-                <div class="col-sm-3">.col-sm-3</div>
-                <div class="col-sm-3">.col-sm-3</div>
-                <div class="col-sm-3">.col-sm-3</div>
-            </div>
-            <div class = "row">
-                <div class="col">.col</div>
-                <div class="col">.col</div>
-                <div class="col">.col</div>
-                <div class="col">.col</div>
-            </div>
-        </div>
+        <table></table>
     </div>
     <script>
         /*
@@ -39,6 +26,21 @@
            For each flower, you should show the image
            and under the image display its name.
         */
+       let showFlower = (flowers) => {
+           let flowersDiv = document.firstElementChild;
+           let table = flowersDiv.firstElementChild;
+           let row1 = table.insertRow(0);
+           let row2 = table.insertRow(1);
+           for (i = 0; i < flowers.length; i++) {
+               if (i < 4) {
+                   row1.innerHTML += `<figure>
+                                        <img src = '${flowers[i].picture}'
+                                            alt = "${flowers[i].name}">
+                                            <figcaption>${flowers[i].name}</figcaption>
+                                        </figure>`;
+               }
+           }
+       }
        class Flower {
            constructor(name, pictureName) {
                this.name = name;
